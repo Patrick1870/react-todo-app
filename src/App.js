@@ -1,8 +1,11 @@
 import { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import Header from './components/Header';
+import Footer from './components/Footer';
 import Tasks from './components/Tasks';
 import AddTask from './components/AddTask';
+import About from './components/About';
 
 
 function App() {
@@ -86,6 +89,7 @@ const toggleReminder = async (id) => {
       <Header title="Todo App: Task management" onAdd={() => setShowAddTask(!showAddTask)} showAdd={showAddTask} />
       {showAddTask && <AddTask  onAdd={addTask} />}
       {tasks.length > 0 ? <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} /> : 'No tasks to show.'}
+      <Footer />
     </div>
   );
 }

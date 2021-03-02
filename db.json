@@ -21,7 +21,7 @@
     {
       "text": "test",
       "day": "friday",
-      "reminder": true,
+      "reminder": false,
       "id": 3
     },
     {
@@ -29,12 +29,6 @@
       "day": "sunday",
       "reminder": true,
       "id": 4
-    },
-    {
-      "text": "sadads",
-      "day": "dsada",
-      "reminder": false,
-      "id": 5
     }
   ]
 }
