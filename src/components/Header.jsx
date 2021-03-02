@@ -1,15 +1,12 @@
 import PropTypes from 'prop-types';
 import Button from './Button';
 
-const Header = ({ title = 'Todo App Default Title' }) => {
-	const onClick = () => {
-		console.log('click');
-	}
+const Header = ({ title = 'Todo App Default Title', onAdd, showAdd }) => {
 
 	return (
 		<header className="header">
 		<h1>{title}</h1>
-		<Button color="green" text='Add' onClick={onClick} />
+		<Button color={showAdd ? 'red' : 'green'} text={showAdd ? 'Hide' : 'Show'} onClick={onAdd} />
 		</header>
 	)
 }
